@@ -58,7 +58,8 @@ def text_reply(msg):
             print("{}已抢到{}".format(datetime.now().strftime("%Y/%m/%d %H:%M:%S"), content))
             with open('discount.log', 'a+', encoding='UTF8') as f:
                 f.writelines("{} 已抢到\n{}".format(datetime.now().strftime("%Y/%m/%d %H:%M:%S"), content))
-                f.writelines("-"*10)
+                f.writelines("----------\n")
+
 
 
 itchat.auto_login(True)

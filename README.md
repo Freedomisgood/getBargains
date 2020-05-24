@@ -1,4 +1,7 @@
 # 自动拿券
+
+Python 3.6、Appnium、Adb
+
 > 通过别人发的口令, 打开淘宝APP进行抢券
 
 
@@ -61,13 +64,16 @@ $ adb shell pm list packages
 
 - 查看包名和activity
 
-  ```
+  ```shell
+  # 在米6(Andriod 10)上尝试可行
   $ adb shell dumpsys window windows | findstr mFocusedApp
-  $ adb shell dumpsys activity | find  mFocusedActivity
   $ adb shell dumpsys window windows | findstr "Current"
-  ```
-
+  
+# 下失效
+  $ adb shell dumpsys activity | find  mFocusedActivity
+```
+  
   - 如果在有apk的情况下, `aapt dump badging d:\\test.apk`
-
+  
   - 打开APP->` adb logcat > D:/log.txt`  -> 胡乱的对APP做一些操作->Ctrl+c 结束adb命令->打开log.txt文件，搜索：Displayed 
 
