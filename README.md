@@ -69,11 +69,9 @@ $ adb shell pm list packages
   $ adb shell dumpsys window windows | findstr mFocusedApp
   $ adb shell dumpsys window windows | findstr "Current"
   
-# 下失效
+  # 下失效
   $ adb shell dumpsys activity | find  mFocusedActivity
-```
-  
+  ```
   - 如果在有apk的情况下, `aapt dump badging d:\\test.apk`
   
   - 打开APP->` adb logcat > D:/log.txt`  -> 胡乱的对APP做一些操作->Ctrl+c 结束adb命令->打开log.txt文件，搜索：Displayed 
-
